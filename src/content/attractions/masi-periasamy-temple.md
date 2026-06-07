@@ -8,7 +8,7 @@ bestTime: Year-round; busiest during the festival season
 entryFee: Free
 timings: 6:00 AM – 8:00 PM
 status: open
-order: 9
+order: 6
 ---
 
 Masi Periasamy Temple is a much-loved shrine among the hill communities of Kolli

@@ -9,7 +9,7 @@ entryFee: Free (small parking charge)
 timings: Daylight hours
 status: open
 featured: true
-order: 3
+order: 2
 ---
 
 Seekuparai (also spelled Seeku Parai) is the postcard viewpoint of Kolli Hills. From

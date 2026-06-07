@@ -8,7 +8,7 @@ bestTime: Dry months for the best trail conditions
 entryFee: Paid activities (per-ride / package — contact the park)
 timings: Check current operating days & hours (newly opened)
 status: open
-order: 19
+order: 14
 ---
 
 RushCliff Adventures bills itself as **"India's first nature-powered, adventure-centric

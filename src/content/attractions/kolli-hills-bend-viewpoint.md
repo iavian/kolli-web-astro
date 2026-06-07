@@ -8,7 +8,7 @@ bestTime: Morning for clear views; avoid in heavy fog
 entryFee: Free
 timings: Daylight hours
 status: open
-order: 12
+order: 7
 ---
 
 The Bend View Point is a spot along the climb where the road opens up to reveal the

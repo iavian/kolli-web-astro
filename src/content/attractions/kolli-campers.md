@@ -9,7 +9,7 @@ bestTime: Clear, dry months (roughly November to February)
 entryFee: Paid packages (varies by tent & inclusions)
 timings: Overnight stays — check in by evening
 status: open
-order: 16
+order: 9
 ---
 
 Kolli Campers offers a **camping experience** for visitors who'd rather wake up to

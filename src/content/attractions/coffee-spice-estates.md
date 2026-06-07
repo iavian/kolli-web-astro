@@ -8,7 +8,7 @@ bestTime: Year-round; harvest season is most aromatic
 entryFee: Varies by estate / guided tour
 timings: Daylight hours (by arrangement)
 status: open
-order: 15
+order: 19
 ---
 
 The cool, misty slopes of Kolli Hills are perfect for **coffee, pepper, cardamom**

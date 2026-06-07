@@ -8,7 +8,7 @@ bestTime: Year-round; good light in the morning
 entryFee: Free
 timings: Open access (roadside)
 status: open
-order: 11
+order: 20
 ---
 
 The Kolli Hills Entrance Arch is the landmark that officially welcomes you to the

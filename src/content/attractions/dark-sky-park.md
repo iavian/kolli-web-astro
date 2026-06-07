@@ -9,7 +9,7 @@ entryFee: Paid stargazing sessions & overnight camps (by booking)
 timings: Evening viewing roughly 7:00 PM – 11:00 PM daily; structured sessions 15 Jan – 15 Jun (closed during the monsoon)
 status: open
 featured: true
-order: 4
+order: 21
 ---
 
 The **Kolli Hills Dark Sky Park** is the **first Dark Sky Park in Tamil Nadu** — a

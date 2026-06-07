@@ -8,7 +8,7 @@ bestTime: Early morning, when trading is liveliest
 entryFee: Free to visit
 timings: Wholesale market — opens very early (around 3:00 AM on market days); quieter later
 status: open
-order: 20
+order: 10
 ---
 
 Solakkadu Market is a local **produce / fruits wholesale market** in Kolli Hills, and a

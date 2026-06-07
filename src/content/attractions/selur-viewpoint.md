@@ -8,7 +8,7 @@ bestTime: Late afternoon to sunset
 entryFee: Free
 timings: Daylight hours
 status: open
-order: 4
+order: 15
 ---
 
 Less crowded than Seekuparai, **Selur Viewpoint** offers a wide, open vista that is

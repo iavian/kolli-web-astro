@@ -9,7 +9,7 @@ entryFee: Free / small charge
 timings: Daylight hours
 status: caution
 statusNote: Water levels rise fast after rain
-order: 6
+order: 3
 ---
 
 Masila Falls is a **tiered waterfall** tumbling through dense Eastern Ghats forest,

@@ -9,7 +9,7 @@ entryFee: Free / small charge
 timings: Daylight hours
 status: caution
 statusNote: Water levels rise fast after rain
-order: 13
+order: 4
 ---
 
 Namma Aruvi ("our waterfall") is a pretty cascade tucked into the greenery of the

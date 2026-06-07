@@ -8,7 +8,7 @@ bestTime: Clear mornings and late afternoons
 entryFee: Small charge for telescope use
 timings: Daylight hours
 status: open
-order: 17
+order: 16
 ---
 
 The Telescope House is a modest but fun stop where a mounted **telescope** lets you

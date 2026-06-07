@@ -8,7 +8,7 @@ bestTime: Early mornings, just after sunrise
 entryFee: Free (a local guide is strongly recommended)
 timings: 9:00 AM – 5:00 PM
 status: open
-order: 14
+order: 18
 ---
 
 Tucked into the hillsides are a cluster of caves — by some counts around **18** —

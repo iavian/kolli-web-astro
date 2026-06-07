@@ -9,7 +9,7 @@ entryFee: Free / small charge
 timings: Daylight hours
 status: caution
 statusNote: Water levels rise fast after rain
-order: 18
+order: 11
 ---
 
 The Two Stepped Kutti Water Falls is a pretty **two-tiered cascade** in the

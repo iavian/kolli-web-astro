@@ -9,7 +9,7 @@ entryFee: Free
 timings: 6:00 AM – 12:00 PM, 4:00 PM – 7:00 PM
 status: open
 featured: true
-order: 2
+order: 5
 ---
 
 The Arapaleeswarar Temple is one of the oldest and most revered shrines in Kolli

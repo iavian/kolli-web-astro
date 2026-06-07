@@ -8,7 +8,7 @@ bestTime: Year-round; festival season is most vibrant
 entryFee: Free
 timings: 6:00 AM – 8:00 PM
 status: open
-order: 10
+order: 17
 ---
 
 Sri Naachiamman Temple is dedicated to **Naachiamman**, a form of the village mother

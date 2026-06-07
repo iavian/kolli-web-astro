@@ -8,7 +8,7 @@ bestTime: Year-round; pleasant in the mornings
 entryFee: ₹10–₹20 per person (approx.)
 timings: 8:00 AM – 8:00 PM
 status: open
-order: 5
+order: 12
 ---
 
 Kolli Hills has been known for centuries for its **medicinal plants**, and this

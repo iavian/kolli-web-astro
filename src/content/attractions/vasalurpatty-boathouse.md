@@ -8,7 +8,7 @@ bestTime: Year-round; water is available in every season
 entryFee: Park entry + per-boat charges
 timings: 6:00 AM – 6:00 PM
 status: open
-order: 7
+order: 13
 ---
 
 The Vasalurpatty Boat House is a man-made lake set up for tourists, complete with a
