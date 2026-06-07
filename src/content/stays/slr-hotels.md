@@ -2,6 +2,7 @@
 title: SLR Hotels (Silver Line Retreat)
 type: Resort
 summary: A wellness-focused resort in Semmedu with a Kerala Ayurvedic spa, multi-cuisine restaurant, lots of indoor and outdoor games and a kids' play area — rooms from deluxe doubles to suites and a dormitory.
+image: "https://slrhotels.com/wp-content/uploads/elementor/thumbs/A-place-where-elegance-qvekw0i2dvlp1v2f3g40fdbz5y5onsed2r91nawrgs.jpg"
 location: Sandal Rock, Sulikki Road, Vazhavandha Nadu, Semmedu Post, Kolli Hills, Tamil Nadu
 priceRange: Tariff on request — contact the resort
 phone: "+91 75025 58585"

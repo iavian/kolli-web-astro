@@ -2,6 +2,7 @@
 title: P.A. Resort
 type: Resort
 summary: A large star hill resort in Semmedu with around 40 cottages, a gym, conference hall, badminton court and on-site restaurant — well-suited to families, groups and corporate stays.
+image: "https://www.paresortkollihills.com/img/slider-img-1.jpg"
 location: Namakkal Periya Gounder Estate, Semmedu, Kolli Hills, Namakkal
 priceRange: Tariff on request — contact the resort
 phone: "+91 94451 76484"

@@ -2,6 +2,7 @@
 title: Kukoo Huts
 type: Cottage
 summary: A traditional hut-style resort in a green, secluded corner of Kolli Hills with a home-style multi-cuisine restaurant, bar, bonfire dining, archery and even a boat house — "more than a stay, it's a soul reset."
+image: "https://www.kukoohuts.com/assets/img/kolli_hills_kukkkohuts.jpg"
 location: Kolli Hills, Namakkal (≈800 m off-road approach)
 priceRange: Affordable / value-for-money — tariff on request
 phone: "+91 63804 63443"

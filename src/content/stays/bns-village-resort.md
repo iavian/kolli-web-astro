@@ -2,6 +2,7 @@
 title: BNS Village Resort
 type: Homestay
 summary: A relaxed hilltop homestay in Semmedu with garden surroundings, a terrace for sunrise and sunset views, and campfire vacation packages — "leave your stress, just relax with us."
+image: "https://www.bnsvillageresort.com/images/sl1.jpg"
 location: No. 17, Sakkaraipatti, Semmedu, Kolli Hills 637411
 priceRange: Tariff on request — contact the homestay
 phone: "+91 99411 77409"

@@ -2,6 +2,7 @@
 title: RVR Hotels (Rejoice Villa Resorts)
 type: Resort
 summary: A family-friendly, budget resort in Kolli Hills with a multi-cuisine restaurant, rooms from doubles to dormitories, an on-site Ayurvedic wellness centre and easy access to the main attractions.
+image: "https://www.rvrhotels.com/assets/images/sarva-outerview-large-mobile.jpg"
 location: Kolli Hills (Kollimalai), Namakkal, Tamil Nadu
 priceRange: Budget-friendly; tariff on request (extra person ~₹1,200)
 phone: "+91 99432 65999"

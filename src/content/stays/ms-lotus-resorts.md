@@ -2,6 +2,7 @@
 title: MS Lotus Resorts & Inn
 type: Resort
 summary: A 25-room hill resort on the Semmedu–Neduvalampatty road with an in-house restaurant, banquet hall and breakfast included — well placed for the Dark Sky Park, Agaya Gangai falls and trekking.
+image: "https://www.mslotusresorts.com/uploads/home-banners/2026/02/19/xlarge/19.jpg"
 location: Semmedu–Neduvalampatty Main Road, Neduvalampatti, Kolli Hills, Namakkal 637411
 priceRange: ₹1,500 – ₹12,000 / night
 phone: "+91 94452 89992"
