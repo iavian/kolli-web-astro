@@ -2,6 +2,7 @@
 title: Ettukai Amman Temple
 category: Temple
 summary: A sacred hilltop goddess temple (also known as the Kollipaavai Temple) reached by a woodland trek and rewarded with panoramic valley views — especially vibrant during its annual festival.
+image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/1f/4c/22/ettukai-amman-temple.jpg?w=900&h=500&s=1"
 location: Near Masila Falls, Kolli Hills (hilltop)
 bestTime: Year-round; festival season is special
 entryFee: Free

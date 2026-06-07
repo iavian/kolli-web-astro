@@ -2,6 +2,7 @@
 title: Masi Periasamy Temple
 category: Temple
 summary: An ancient, much-loved guardian-deity shrine (4.6★, 670+ reviews) above Masila Falls in Ariyurnadu, said to have stood here for over a thousand years — peaceful most days, vibrant during its annual festival.
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Masi_periyasamy_temple_kollimalai.jpg?width=500"
 location: Ariyurnadu (above Masila Falls), Kolli Hills, Namakkal 637415
 bestTime: Year-round; busiest during the festival season
 entryFee: Free
