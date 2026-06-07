@@ -2,6 +2,7 @@
 title: Selur Viewpoint
 category: Viewpoint
 summary: A quieter, panoramic viewpoint on the western side of the hills, popular for unobstructed sunset views over the valley.
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Kollimalai_Kundrugal.JPG?width=500"
 location: Selur, western Kolli Hills
 bestTime: Late afternoon to sunset
 entryFee: Free

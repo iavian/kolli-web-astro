@@ -2,6 +2,7 @@
 title: Tampcol Medicinal Botanical Garden
 category: Nature
 summary: A government-run garden with over 300 plant species — a rose garden, herbal park, orchids and aromatic spices — plus a children's park and viewpoint, ideal for a relaxed family outing.
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Field_at_Kolli_Hills.jpg?width=500"
 location: Near Semmedu, Kolli Hills
 bestTime: Year-round; pleasant in the mornings
 entryFee: ₹10–₹20 per person (approx.)

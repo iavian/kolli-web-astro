@@ -2,6 +2,7 @@
 title: Seekuparai Viewpoint
 category: Viewpoint
 summary: A breezy cliff-edge viewpoint overlooking three districts — Namakkal, Salem and Trichy — with views stretching over 100 km on a clear day. A favourite for sunrise and misty mornings.
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/KolliHills_Valley.JPG?width=500"
 location: North-east Kolli Hills (Seeku Parai)
 bestTime: Early morning before sunrise, for the clearest views
 entryFee: Free (small parking charge)

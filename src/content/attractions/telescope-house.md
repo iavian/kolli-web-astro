@@ -2,6 +2,7 @@
 title: Telescope House
 category: Viewpoint
 summary: A simple viewing point fitted with a telescope, letting you scan the layered ranges, valleys and distant plains in closer detail.
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Forest_from_hair_pin_bend_in_kollihills.jpg?width=500"
 location: Kolli Hills, Namakkal District
 bestTime: Clear mornings and late afternoons
 entryFee: Small charge for telescope use

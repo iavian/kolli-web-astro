@@ -2,6 +2,7 @@
 title: Kolli Hills Dark Sky Park
 category: Adventure
 summary: Tamil Nadu's first Dark Sky Park — an astro-tourism centre where exceptionally clear, low-light night skies make for spectacular stargazing, with expert-led whole-night observation camps.
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Cloud_slides_in_peaks_in_kolli_hills.jpg?width=500"
 location: 8959+6R, Ariyurnadu, Kolli Hills, Namakkal 637415 (stays at Agaya Gangai eco-huts)
 bestTime: New-moon nights between 15 January and 15 June
 entryFee: Paid stargazing sessions & overnight camps (by booking)

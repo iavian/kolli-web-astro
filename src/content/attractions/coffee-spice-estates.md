@@ -2,6 +2,7 @@
 title: Coffee & Spice Estates
 category: Nature
 summary: The plantations that clothe the Kolli Hills — coffee, pepper, cardamom and other spices — where guided estate walks reveal how the hills' famous produce is grown and processed.
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Coffee_in_Kolli_hills.jpg?width=500"
 location: Across the Kolli Hills, Namakkal District
 bestTime: Year-round; harvest season is most aromatic
 entryFee: Varies by estate / guided tour

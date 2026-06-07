@@ -2,6 +2,7 @@
 title: Masila Falls
 category: Waterfall
 summary: A tiered waterfall set in dense Eastern Ghats forest, with the Masi Periasamy temple at the top — a scenic, less-crowded alternative to Agaya Gangai (and a gentle spot lower down for families).
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Masila_Falls.jpg?width=500"
 location: Kolli Hills, Namakkal District
 bestTime: Monsoon and just after (July to December)
 entryFee: Free / small charge

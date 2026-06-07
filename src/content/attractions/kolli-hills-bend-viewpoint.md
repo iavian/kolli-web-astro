@@ -2,6 +2,7 @@
 title: Kolli Hills Bend View Point
 category: Viewpoint
 summary: A roadside viewpoint on the ghat road where you can look down on the dramatic stack of hairpin bends winding up the mountain — a classic photo stop.
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/34th_Hairpin_Kolli_Hill_road.jpg?width=500"
 location: On the ghat road, partway up the 70 hairpin bends
 bestTime: Morning for clear views; avoid in heavy fog
 entryFee: Free

@@ -2,6 +2,7 @@
 title: Namma Aruvi Falls
 category: Waterfall
 summary: A scenic, lesser-crowded waterfall in the Kolli Hills, a refreshing stop for those seeking nature and a cool dip away from the busier spots.
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Namma_Aruvi.jpg?width=500"
 location: Kolli Hills, Namakkal District
 bestTime: Monsoon and just after (July to December), when the flow is strongest
 entryFee: Free / small charge

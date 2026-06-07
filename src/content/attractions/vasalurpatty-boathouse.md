@@ -2,6 +2,7 @@
 title: Vasalurpatty Boat House & Park
 category: Adventure
 summary: An artificial lake with a natural boulder island, offering pedal and row boating year-round, plus a children's park and food stalls — a relaxed spot to unwind with the family.
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Boat_ride_kolli.jpg?width=500"
 location: Vasalurpatty, Kolli Hills
 bestTime: Year-round; water is available in every season
 entryFee: Park entry + per-boat charges

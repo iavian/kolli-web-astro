@@ -2,6 +2,7 @@
 title: Arapaleeswarar Temple
 category: Temple
 summary: An ancient Shiva temple believed to date back over a thousand years, known for its mystical history and a hidden underground passage.
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Arapalli.jpg?width=500"
 location: Central Kolli Hills, near Agaya Gangai
 bestTime: Year-round; the Aadi festival (Jul–Aug) is especially vibrant
 entryFee: Free
