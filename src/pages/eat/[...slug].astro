@@ -84,6 +84,13 @@ const mapHref = d.location
           </a>
         )
       }
+      {
+        d.website && (
+          <a href={d.website} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 font-semibold text-forest-700 ring-1 ring-forest-200 hover:bg-forest-50">
+            🌐 Visit website
+          </a>
+        )
+      }
     </div>
 
     <!-- Markdown body -->

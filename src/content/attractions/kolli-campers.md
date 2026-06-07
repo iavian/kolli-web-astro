@@ -3,6 +3,7 @@ title: Kolli Campers
 category: Adventure
 summary: A top-rated campground (4.8★ from 300+ reviews) offering tent stays, bonfire evenings and clear hill night skies — for travellers who want to stay close to nature.
 image: "https://images.exoticamp.com/vendors/images/profile/2_20240930T090511496Z.jpg"
+website: "https://www.exoticamp.com/camping/kolli-hills-camping"
 location: 68XG+FM, Thinnanurnadu, Kolli Hills, Namakkal 637411
 bestTime: Clear, dry months (roughly November to February)
 entryFee: Paid packages (varies by tent & inclusions)

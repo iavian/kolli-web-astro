@@ -63,14 +63,23 @@ const telHref = d.phone ? `tel:${d.phone.replace(/\s/g, '')}` : null;
       )
     }
 
-    <!-- Call to book -->
-    {
-      telHref && (
-        <a href={telHref} class="mt-6 inline-flex items-center gap-2 rounded-full bg-forest-600 px-5 py-2.5 font-semibold text-white hover:bg-forest-700">
-          📞 Call {d.phone}
-        </a>
-      )
-    }
+    <!-- Call to book / website -->
+    <div class="mt-6 flex flex-wrap gap-3">
+      {
+        telHref && (
+          <a href={telHref} class="inline-flex items-center gap-2 rounded-full bg-forest-600 px-5 py-2.5 font-semibold text-white hover:bg-forest-700">
+            📞 Call {d.phone}
+          </a>
+        )
+      }
+      {
+        d.website && (
+          <a href={d.website} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full px-5 py-2.5 font-semibold text-forest-700 ring-1 ring-forest-300 hover:bg-forest-50">
+            🌐 Visit website
+          </a>
+        )
+      }
+    </div>
 
     <!-- Amenities -->
     {

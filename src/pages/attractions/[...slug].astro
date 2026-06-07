@@ -59,6 +59,15 @@ const facts = [
       )
     }
 
+    <!-- Website -->
+    {
+      d.website && (
+        <a href={d.website} target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-2 rounded-full bg-forest-600 px-5 py-2.5 font-semibold text-white hover:bg-forest-700">
+          🌐 Visit website
+        </a>
+      )
+    }
+
     <!-- Markdown body -->
     <div class="prose-kolli mt-8 max-w-none">
       <Content />
