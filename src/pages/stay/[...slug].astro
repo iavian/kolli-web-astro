@@ -1,0 +1,102 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Thumb from '../../components/Thumb.astro';
+import { stayEmoji } from '../../lib/icons';
+
+export async function getStaticPaths() {
+  const items = await getCollection('stays');
+  return items.map((item) => ({ params: { slug: item.id }, props: { item } }));
+}
+
+const { item } = Astro.props;
+const { Content } = await render(item);
+const d = item.data;
+
+const facts = [
+  { label: 'Type', value: d.type },
+  { label: 'Location', value: d.location },
+  { label: 'Price range', value: d.priceRange },
+].filter((f) => f.value);
+
+const telHref = d.phone ? `tel:${d.phone.replace(/\s/g, '')}` : null;
+---
+
+<Layout title={d.title} description={d.summary}>
+  <!-- Banner -->
+  <section class="relative h-64 w-full overflow-hidden sm:h-80">
+    <Thumb image={d.image} alt={d.title} label={d.type} emoji={stayEmoji[d.type]} />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0">
+      <div class="mx-auto max-w-4xl px-4 pb-6">
+        <span class="text-xs font-semibold uppercase tracking-wide text-white/80">{d.type}</span>
+        <h1 class="font-display text-3xl font-bold text-white drop-shadow sm:text-4xl">{d.title}</h1>
+      </div>
+    </div>
+  </section>
+
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <a href="/stay" class="text-sm font-semibold text-forest-600 hover:text-forest-800">← All places to stay</a>
+
+    {
+      d.unverified && (
+        <p class="mt-4 rounded-lg border-l-4 border-amber-400 bg-amber-50 p-3 text-sm text-amber-800">
+          ⓘ <strong>Details unverified.</strong> We haven't confirmed this listing's
+          contact details and rates yet — please verify directly before booking.
+        </p>
+      )
+    }
+
+    <p class="mt-4 text-lg text-forest-800">{d.summary}</p>
+
+    <!-- Quick facts -->
+    {
+      facts.length > 0 && (
+        <dl class="mt-6 grid gap-px overflow-hidden rounded-xl bg-forest-100 ring-1 ring-forest-100 sm:grid-cols-3">
+          {facts.map((f) => (
+            <div class="bg-white p-4">
+              <dt class="text-xs font-semibold uppercase tracking-wide text-forest-500">{f.label}</dt>
+              <dd class="mt-0.5 text-forest-800">{f.value}</dd>
+            </div>
+          ))}
+        </dl>
+      )
+    }
+
+    <!-- Call to book -->
+    {
+      telHref && (
+        <a href={telHref} class="mt-6 inline-flex items-center gap-2 rounded-full bg-forest-600 px-5 py-2.5 font-semibold text-white hover:bg-forest-700">
+          📞 Call {d.phone}
+        </a>
+      )
+    }
+
+    <!-- Amenities -->
+    {
+      d.amenities.length > 0 && (
+        <section class="mt-8">
+          <h2 class="font-display text-xl font-bold text-forest-800">Facilities</h2>
+          <ul class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
+            {d.amenities.map((a) => (
+              <li class="flex items-center gap-2 text-sm text-forest-700">
+                <span class="text-forest-500" aria-hidden="true">✓</span>
+                {a}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <!-- Markdown body -->
+    <div class="prose-kolli mt-8 max-w-none">
+      <Content />
+    </div>
+
+    <p class="mt-10 rounded-lg bg-clay-50 p-4 text-sm text-clay-500 ring-1 ring-clay-200">
+      ⓘ This listing is for visitor convenience and is not an endorsement. Confirm
+      tariffs, availability and contact details directly before booking.
+    </p>
+  </article>
+</Layout>

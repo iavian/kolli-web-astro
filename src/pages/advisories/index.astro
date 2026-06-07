@@ -1,0 +1,83 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+import { severityStyle } from '../../lib/icons';
+
+const all = (await getCollection('advisories')).sort(
+  (a, b) => b.data.updated.getTime() - a.data.updated.getTime(),
+);
+const active = all.filter((a) => a.data.active);
+const past = all.filter((a) => !a.data.active);
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+
+// Pre-render markdown bodies
+const rendered = new Map(
+  await Promise.all(all.map(async (a) => [a.id, (await render(a)).Content] as const)),
+);
+---
+
+<Layout title="Advisories" description="Latest travel advisories, safety alerts and status updates for Kolli Hills visitors.">
+  <PageHero
+    title="Travel Advisories"
+    emoji="⚠️"
+    subtitle="Up-to-date safety notices and status alerts. Always check here before heading to waterfalls or driving the ghat road."
+  />
+
+  <div class="mx-auto max-w-3xl px-4 py-10">
+    {
+      active.length === 0 ? (
+        <p class="rounded-lg bg-forest-100 p-5 text-forest-700">
+          ✅ No active advisories right now. Travel conditions are normal — but always
+          use common sense around water and on the ghat road.
+        </p>
+      ) : (
+        <section class="space-y-5">
+          <h2 class="text-sm font-bold uppercase tracking-wide text-forest-500">Active now</h2>
+          {active.map((a) => {
+            const s = severityStyle[a.data.severity];
+            const Body = rendered.get(a.id)!;
+            return (
+              <article id={a.id} class:list={['scroll-mt-24 rounded-xl border-l-4 p-5 shadow-sm', s.cls]}>
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <h3 class="text-lg font-bold">
+                    <span class="mr-1" aria-hidden="true">{s.emoji}</span>
+                    {a.data.title}
+                  </h3>
+                  <span class="rounded-full bg-white/60 px-2 py-0.5 text-xs font-semibold uppercase">{s.label}</span>
+                </div>
+                <p class="mt-1 text-xs opacity-75">Updated {fmt(a.data.updated)}</p>
+                <div class="prose-kolli mt-3 max-w-none text-current">
+                  <Body />
+                </div>
+              </article>
+            );
+          })}
+        </section>
+      )
+    }
+
+    {
+      past.length > 0 && (
+        <section class="mt-12 space-y-4">
+          <h2 class="text-sm font-bold uppercase tracking-wide text-forest-500">Past / inactive</h2>
+          {past.map((a) => {
+            const s = severityStyle[a.data.severity];
+            return (
+              <details id={a.id} class="scroll-mt-24 rounded-lg bg-white p-4 ring-1 ring-forest-100">
+                <summary class="cursor-pointer font-semibold text-forest-700">
+                  <span class="mr-1" aria-hidden="true">{s.emoji}</span>
+                  {a.data.title}
+                  <span class="ml-2 text-xs font-normal text-forest-400">· {fmt(a.data.updated)}</span>
+                </summary>
+                <p class="mt-2 text-sm text-forest-600">{a.data.summary}</p>
+              </details>
+            );
+          })}
+        </section>
+      )
+    }
+  </div>
+</Layout>

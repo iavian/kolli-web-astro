@@ -1,0 +1,67 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Thumb from '../../components/Thumb.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import { attractionEmoji } from '../../lib/icons';
+
+export async function getStaticPaths() {
+  const items = await getCollection('attractions');
+  return items.map((item) => ({ params: { slug: item.id }, props: { item } }));
+}
+
+const { item } = Astro.props;
+const { Content } = await render(item);
+const d = item.data;
+
+const facts = [
+  { label: 'Category', value: d.category },
+  { label: 'Location', value: d.location },
+  { label: 'Best time', value: d.bestTime },
+  { label: 'Timings', value: d.timings },
+  { label: 'Entry fee', value: d.entryFee },
+].filter((f) => f.value);
+---
+
+<Layout title={d.title} description={d.summary}>
+  <!-- Banner -->
+  <section class="relative h-64 w-full overflow-hidden sm:h-80">
+    <Thumb image={d.image} alt={d.title} label={d.category} emoji={attractionEmoji[d.category]} />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0">
+      <div class="mx-auto max-w-4xl px-4 pb-6">
+        <span class="text-xs font-semibold uppercase tracking-wide text-white/80">{d.category}</span>
+        <h1 class="font-display text-3xl font-bold text-white drop-shadow sm:text-4xl">{d.title}</h1>
+      </div>
+    </div>
+  </section>
+
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <a href="/attractions" class="text-sm font-semibold text-forest-600 hover:text-forest-800">← All attractions</a>
+
+    <div class="mt-4 flex flex-wrap items-center gap-3">
+      <StatusBadge status={d.status} note={d.statusNote} size="md" />
+    </div>
+
+    <p class="mt-4 text-lg text-forest-800">{d.summary}</p>
+
+    <!-- Quick facts -->
+    {
+      facts.length > 0 && (
+        <dl class="mt-6 grid gap-px overflow-hidden rounded-xl bg-forest-100 ring-1 ring-forest-100 sm:grid-cols-2">
+          {facts.map((f) => (
+            <div class="bg-white p-4">
+              <dt class="text-xs font-semibold uppercase tracking-wide text-forest-500">{f.label}</dt>
+              <dd class="mt-0.5 text-forest-800">{f.value}</dd>
+            </div>
+          ))}
+        </dl>
+      )
+    }
+
+    <!-- Markdown body -->
+    <div class="prose-kolli mt-8 max-w-none">
+      <Content />
+    </div>
+  </article>
+</Layout>

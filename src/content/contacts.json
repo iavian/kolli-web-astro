@@ -1,0 +1,97 @@
+[
+  {
+    "id": "police-emergency",
+    "name": "Police Emergency",
+    "category": "Emergency",
+    "phone": "100",
+    "notes": "All-India police emergency number",
+    "available": "24x7"
+  },
+  {
+    "id": "ambulance",
+    "name": "Ambulance",
+    "category": "Emergency",
+    "phone": "108",
+    "notes": "Free emergency ambulance service (Tamil Nadu)",
+    "available": "24x7"
+  },
+  {
+    "id": "fire",
+    "name": "Fire & Rescue",
+    "category": "Emergency",
+    "phone": "101",
+    "notes": "Fire and rescue services",
+    "available": "24x7"
+  },
+  {
+    "id": "kolli-police-station",
+    "name": "Kolli Hills Police Station",
+    "category": "Police",
+    "phone": "+91 90000 00100",
+    "address": "Semmedu, Kolli Hills, Namakkal District",
+    "notes": "Local police station for the hill area",
+    "available": "24x7"
+  },
+  {
+    "id": "govt-hospital",
+    "name": "Government Hospital, Kolli Hills",
+    "category": "Hospital",
+    "phone": "+91 90000 00200",
+    "address": "Semmedu, Kolli Hills",
+    "notes": "Primary health centre; serious cases referred to Namakkal/Salem",
+    "available": "24x7 emergency"
+  },
+  {
+    "id": "namakkal-hospital",
+    "name": "Namakkal Government Medical Hospital",
+    "category": "Hospital",
+    "phone": "+91 90000 00201",
+    "address": "Namakkal town (foot of the hills)",
+    "notes": "Larger hospital for serious cases, ~50 km via ghat road",
+    "available": "24x7"
+  },
+  {
+    "id": "ravi-car-mechanic",
+    "name": "Ravi Auto Care (Car Mechanic)",
+    "category": "Car Mechanic",
+    "phone": "+91 90000 00300",
+    "address": "Near Kolli Hills bus stand",
+    "notes": "General car repairs, towing assistance for ghat-road breakdowns",
+    "available": "8:00 AM – 8:00 PM"
+  },
+  {
+    "id": "kumar-bike-mechanic",
+    "name": "Kumar Two-Wheeler Service (Bike Mechanic)",
+    "category": "Bike Mechanic",
+    "phone": "+91 90000 00301",
+    "address": "Semmedu market area",
+    "notes": "Motorcycle and scooter repairs, puncture service",
+    "available": "8:30 AM – 8:00 PM"
+  },
+  {
+    "id": "hills-taxi",
+    "name": "Kolli Hills Taxi & Jeep Service",
+    "category": "Taxi",
+    "phone": "+91 90000 00400",
+    "notes": "Local sightseeing taxis and jeeps; fixed point-to-point rates",
+    "available": "6:00 AM – 9:00 PM"
+  },
+  {
+    "id": "tourism-office",
+    "name": "Tourist Information Office",
+    "category": "Tourism",
+    "phone": "+91 90000 00500",
+    "address": "Semmedu, Kolli Hills",
+    "notes": "Guidance, government guest-house bookings, guide referrals",
+    "available": "10:00 AM – 5:00 PM"
+  },
+  {
+    "id": "fuel-station",
+    "name": "Petrol Bunk, Kolli Hills",
+    "category": "Fuel",
+    "phone": "+91 90000 00600",
+    "address": "Semmedu",
+    "notes": "Fuel up before the climb — limited stations on the hills",
+    "available": "7:00 AM – 8:00 PM"
+  }
+]

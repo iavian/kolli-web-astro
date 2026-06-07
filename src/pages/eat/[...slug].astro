@@ -1,0 +1,94 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Thumb from '../../components/Thumb.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+
+export async function getStaticPaths() {
+  const items = await getCollection('eat');
+  return items.map((item) => ({ params: { slug: item.id }, props: { item } }));
+}
+
+const { item } = Astro.props;
+const { Content } = await render(item);
+const d = item.data;
+
+const facts = [
+  { label: 'Cuisine', value: d.cuisine },
+  { label: 'Location', value: d.location },
+  { label: 'Price range', value: d.priceRange },
+].filter((f) => f.value);
+
+const telHref = d.phone ? `tel:${d.phone.replace(/\s/g, '')}` : null;
+const mapHref = d.location
+  ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${d.title} ${d.location}`)}`
+  : null;
+---
+
+<Layout title={d.title} description={d.summary}>
+  <!-- Banner -->
+  <section class="relative h-64 w-full overflow-hidden sm:h-80">
+    <Thumb image={d.image} alt={d.title} label={d.cuisine} emoji="🍴" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0">
+      <div class="mx-auto max-w-4xl px-4 pb-6">
+        <span class="text-xs font-semibold uppercase tracking-wide text-white/80">{d.cuisine}</span>
+        <h1 class="font-display text-3xl font-bold text-white drop-shadow sm:text-4xl">{d.title}</h1>
+      </div>
+    </div>
+  </section>
+
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <a href="/eat" class="text-sm font-semibold text-forest-600 hover:text-forest-800">← All places to eat</a>
+
+    <div class="mt-4 flex flex-wrap items-center gap-3">
+      {
+        d.vegOnly && (
+          <span class="inline-flex items-center rounded border border-green-600 px-1.5 py-0.5 text-xs font-bold text-green-700" title="Pure vegetarian">
+            ● PURE VEG
+          </span>
+        )
+      }
+      {d.status === 'closed' && <StatusBadge status="closed" size="md" />}
+    </div>
+
+    <p class="mt-4 text-lg text-forest-800">{d.summary}</p>
+
+    <!-- Quick facts -->
+    {
+      facts.length > 0 && (
+        <dl class="mt-6 grid gap-px overflow-hidden rounded-xl bg-forest-100 ring-1 ring-forest-100 sm:grid-cols-3">
+          {facts.map((f) => (
+            <div class="bg-white p-4">
+              <dt class="text-xs font-semibold uppercase tracking-wide text-forest-500">{f.label}</dt>
+              <dd class="mt-0.5 text-forest-800">{f.value}</dd>
+            </div>
+          ))}
+        </dl>
+      )
+    }
+
+    <!-- Contact actions -->
+    <div class="mt-6 flex flex-wrap gap-3">
+      {
+        telHref && (
+          <a href={telHref} class="inline-flex items-center gap-2 rounded-full bg-forest-600 px-5 py-2.5 font-semibold text-white hover:bg-forest-700">
+            📞 Call {d.phone}
+          </a>
+        )
+      }
+      {
+        mapHref && (
+          <a href={mapHref} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 font-semibold text-forest-700 ring-1 ring-forest-200 hover:bg-forest-50">
+            📍 Open in Maps
+          </a>
+        )
+      }
+    </div>
+
+    <!-- Markdown body -->
+    <div class="prose-kolli mt-8 max-w-none">
+      <Content />
+    </div>
+  </article>
+</Layout>

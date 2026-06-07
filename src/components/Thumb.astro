@@ -1,0 +1,31 @@
+---
+/**
+ * Shows the item's photo if an `image` is set in its Markdown file.
+ * Otherwise falls back to a coloured gradient with an emoji, so the site
+ * always looks complete even before real photos are added.
+ */
+interface Props {
+  image?: string;
+  alt: string;
+  label?: string;
+  emoji?: string;
+  class?: string;
+}
+const { image, alt, label, emoji = '🌄', class: cls = '' } = Astro.props;
+---
+
+{
+  image ? (
+    <img src={image} alt={alt} loading="lazy" class:list={['h-full w-full object-cover', cls]} />
+  ) : (
+    <div
+      class:list={[
+        'flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-forest-400 via-forest-500 to-forest-700 text-white',
+        cls,
+      ]}
+    >
+      <span class="text-4xl drop-shadow" aria-hidden="true">{emoji}</span>
+      {label && <span class="mt-1 px-3 text-center text-xs font-medium uppercase tracking-wide text-forest-50/90">{label}</span>}
+    </div>
+  )
+}

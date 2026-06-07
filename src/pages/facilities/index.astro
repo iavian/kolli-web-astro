@@ -1,0 +1,66 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+import { facilityEmoji } from '../../lib/icons';
+
+const facilities = await getCollection('facilities');
+
+const order = ['Restroom', 'Drinking Water', 'ATM', 'Fuel', 'Parking', 'Bus Stop', 'Checkpoint', 'Liquor (TASMAC)', 'Wi-Fi', 'Other'];
+const grouped = order
+  .map((cat) => ({ category: cat, items: facilities.filter((f) => f.data.category === cat) }))
+  .filter((g) => g.items.length > 0);
+---
+
+<Layout title="Facilities" description="Public amenities in Kolli Hills — restrooms, drinking water, ATMs, fuel, parking and more, with map locations.">
+  <PageHero
+    title="Facilities & Amenities"
+    emoji="🚻"
+    subtitle="Handy public amenities around Kolli Hills — restrooms, drinking water, ATMs, fuel and parking. Tap any location to open it in Google Maps."
+  />
+
+  <div class="mx-auto max-w-4xl px-4 py-10">
+    {
+      grouped.length === 0 ? (
+        <p class="rounded-lg bg-forest-100 p-5 text-forest-700">No facilities listed yet.</p>
+      ) : (
+        <div class="space-y-10">
+          {grouped.map((group) => (
+            <section>
+              <h2 class="mb-3 flex items-center gap-2 text-lg font-bold text-forest-800">
+                <span aria-hidden="true">{facilityEmoji[group.category]}</span>
+                {group.category}
+              </h2>
+              <div class="overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-forest-100">
+                {group.items.map((f, idx) => (
+                  <div class:list={['flex flex-col gap-2 p-4 sm:flex-row sm:items-center sm:justify-between', idx > 0 && 'border-t border-forest-100']}>
+                    <div>
+                      <p class="font-semibold text-forest-800">{f.data.name}</p>
+                      {f.data.location && <p class="text-sm text-forest-500">📍 {f.data.location}</p>}
+                      {f.data.notes && <p class="text-sm text-forest-500">{f.data.notes}</p>}
+                    </div>
+                    {f.data.mapUrl && (
+                      <a
+                        href={f.data.mapUrl}
+                        target="_blank"
+                        rel="noopener"
+                        class="shrink-0 self-start rounded-full bg-forest-600 px-4 py-1.5 text-sm font-semibold text-white hover:bg-forest-700 sm:self-auto"
+                      >
+                        📍 Open in Maps
+                      </a>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+      )
+    }
+
+    <p class="mt-8 rounded-lg bg-clay-50 p-4 text-sm text-clay-500 ring-1 ring-clay-200">
+      ⓘ Public amenities on the hills can be limited and not always maintained. Use this
+      as a guide and carry essentials (water, tissue, cash) when heading to remote spots.
+    </p>
+  </div>
+</Layout>

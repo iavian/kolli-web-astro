@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+
+const reach = [
+  { mode: '✈️ By Air', text: 'Nearest airports are Salem (~80 km) and Tiruchirappalli/Trichy (~120 km). Coimbatore (~180 km) has more connections. Hire a taxi or drive from there.' },
+  { mode: '🚆 By Train', text: 'Namakkal and Salem are the closest railheads. From there it is a scenic road journey up the ghat to the hills.' },
+  { mode: '🚌 By Road / Bus', text: 'Government and private buses run from Namakkal to Kolli Hills (Semmedu). Buses negotiate all 70 hairpin bends — sit toward the front if you are prone to motion sickness.' },
+  { mode: '🚗 By Own Vehicle', text: 'Drive via Namakkal → Kolli Hills ghat road. The climb has 70 hairpin bends; allow extra time and check brakes and fuel beforehand.' },
+];
+
+const tips = [
+  ['🗓️', 'Best time to visit', 'Roughly February to December is ideal — green and cool. Summers stay below ~30°C; winters (Dec–Feb) are chilly at 13–18°C. January can get extremely cold at this elevation. Plan 2–3 days to do the hills justice.'],
+  ['🧥', 'What to pack', 'Light woollens for evenings, rain jacket in monsoon, sturdy walking/trekking shoes, a refillable water bottle, sunscreen, insect repellent, a small first-aid kit and a power bank.'],
+  ['📶', 'Network & cash', 'Mobile signal is patchy; BSNL/Jio work best in parts. ATMs are few — carry enough cash, as card/UPI is unreliable.'],
+  ['⛽', 'Fuel & vehicle', 'Fill fuel before the climb. Petrol stations on the hills are limited. Self-drivers should be comfortable on steep, winding ghat roads.'],
+  ['💧', 'Water safety', 'Never enter waterfalls or streams when the water is muddy or rising. Levels change fast after upstream rain. Watch children closely.'],
+  ['🥾', 'Trekking smart', 'Tell someone your route, carry water, and hire a local guide for caves and longer trails. Weather can change fast — be ready for sudden rain.'],
+  ['🙏', 'Respect local culture', 'Dress modestly at temples, remove footwear, ask before photographing people, and carry your litter back — help keep the hills clean.'],
+];
+
+const food = [
+  ['🍲', 'Attukal kilangu soup', 'A local goat-trotter soup, traditionally valued for easing knee and joint pain.'],
+  ['🌾', 'Millet dishes', 'Hearty, healthy millet-based meals that are a staple of the hill cuisine.'],
+  ['🟢', 'Jackfruit specials', 'Kolli is famous for jackfruit — try chips, curries and seasonal fresh fruit.'],
+  ['🎋', 'Bamboo rice', 'A rare tribal delicacy of rice cooked in or harvested from bamboo.'],
+];
+
+const activities = [
+  ['🥾', 'Trekking & hiking', 'From easy nature walks to the steep Agaya Gangai and Seekuparai trails.'],
+  ['🧗', 'Rock climbing', 'Granite boulders near Arapaleeswarar Temple, best with a local operator.'],
+  ['🦚', 'Birdwatching', 'Spot peacocks, hornbills and more in the forests and estates.'],
+  ['☕', 'Coffee & spice tours', 'Guided walks through working coffee and pepper estates.'],
+  ['🛖', 'Cave exploration', 'Trek to the ancient Siddhar meditation caves with a guide.'],
+  ['🔭', 'Stargazing', "Whole-night astronomy camps at Tamil Nadu's first Dark Sky Park."],
+  ['🚣', 'Boating', 'Pedal and row boats on the Vasalurpatty lake.'],
+];
+---
+
+<Layout title="Plan Your Trip" description="How to reach Kolli Hills, the best time to visit, what to pack and essential travel tips.">
+  <PageHero
+    title="Plan Your Trip"
+    emoji="🧭"
+    subtitle="Everything you need to know before visiting Kolli Hills — how to get there, when to come and how to stay safe."
+  />
+
+  <div class="mx-auto max-w-4xl px-4 py-10">
+    <!-- General info -->
+    <section class="prose-kolli max-w-none">
+      <h2>About Kolli Hills</h2>
+      <p>
+        Kolli Hills (<em>Kolli Malai</em>) is a mountain range in the Eastern Ghats,
+        located in the Namakkal district of Tamil Nadu, India. Rising to about
+        1,300 metres, it is known for its forests, waterfalls, viewpoints, ancient
+        temples and a rich tradition of medicinal herbs. The hills are reached by a
+        famous ghat road of <strong>70 hairpin bends</strong>.
+      </p>
+      <p>
+        Compared to popular hill stations, Kolli Hills remains relatively quiet and
+        unspoiled, making it perfect for travellers who enjoy nature, gentle treks
+        and a slower pace away from crowds.
+      </p>
+    </section>
+
+    <!-- How to reach -->
+    <section class="mt-10">
+      <h2 class="font-display text-2xl font-bold text-forest-800">How to reach</h2>
+      <div class="mt-4 grid gap-4 sm:grid-cols-2">
+        {
+          reach.map((r) => (
+            <div class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-forest-100">
+              <h3 class="font-semibold text-forest-800">{r.mode}</h3>
+              <p class="mt-1 text-sm text-forest-600">{r.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Travel tips -->
+    <section class="mt-10">
+      <h2 class="font-display text-2xl font-bold text-forest-800">Travel tips &amp; essentials</h2>
+      <div class="mt-4 grid gap-4 sm:grid-cols-2">
+        {
+          tips.map(([icon, title, body]) => (
+            <div class="flex gap-3 rounded-xl bg-white p-5 shadow-sm ring-1 ring-forest-100">
+              <span class="text-2xl" aria-hidden="true">{icon}</span>
+              <div>
+                <h3 class="font-semibold text-forest-800">{title}</h3>
+                <p class="mt-1 text-sm text-forest-600">{body}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Things to do -->
+    <section class="mt-10">
+      <h2 class="font-display text-2xl font-bold text-forest-800">Things to do</h2>
+      <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          activities.map(([icon, title, body]) => (
+            <div class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-forest-100">
+              <h3 class="font-semibold text-forest-800">
+                <span class="mr-1.5" aria-hidden="true">{icon}</span>
+                {title}
+              </h3>
+              <p class="mt-1 text-sm text-forest-600">{body}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Local food -->
+    <section class="mt-10">
+      <h2 class="font-display text-2xl font-bold text-forest-800">Local food &amp; produce</h2>
+      <p class="mt-2 text-forest-600">
+        Kolli Hills is known for its medicinal herbs, coffee, pepper and especially
+        its jackfruit. Don't leave without trying a few hill specialities:
+      </p>
+      <div class="mt-4 grid gap-4 sm:grid-cols-2">
+        {
+          food.map(([icon, title, body]) => (
+            <div class="flex gap-3 rounded-xl bg-white p-5 shadow-sm ring-1 ring-forest-100">
+              <span class="text-2xl" aria-hidden="true">{icon}</span>
+              <div>
+                <h3 class="font-semibold text-forest-800">{title}</h3>
+                <p class="mt-1 text-sm text-forest-600">{body}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mt-10 rounded-2xl bg-forest-700 p-8 text-center text-white">
+      <h2 class="font-display text-2xl font-bold">Before you set off</h2>
+      <p class="mx-auto mt-2 max-w-xl text-forest-100">
+        Check the latest advisories and save the emergency contacts. A little planning
+        makes for a safe and memorable trip.
+      </p>
+      <div class="mt-5 flex flex-wrap justify-center gap-3">
+        <a href="/advisories" class="rounded-full bg-white px-5 py-2.5 font-semibold text-forest-800 hover:bg-forest-50">Check advisories</a>
+        <a href="/contacts" class="rounded-full bg-forest-600 px-5 py-2.5 font-semibold text-white ring-1 ring-white/30 hover:bg-forest-500">Emergency contacts</a>
+      </div>
+    </section>
+  </div>
+</Layout>

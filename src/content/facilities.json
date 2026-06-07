@@ -1,0 +1,34 @@
+[
+  {
+    "id": "public-toilet-semmedu",
+    "name": "Public Toilet (Semmedu)",
+    "category": "Restroom",
+    "location": "Semmedu area, Kolli Hills (≈11.2788, 78.3322)",
+    "mapUrl": "https://www.google.com/maps?q=11.2788347,78.3322278",
+    "notes": "Public restroom near the Semmedu hub, close to the local eateries."
+  },
+  {
+    "id": "tasmac-semmedu",
+    "name": "New TASMAC Semmedu",
+    "category": "Liquor (TASMAC)",
+    "location": "Semmedu, Kolli Hills (≈11.2759, 78.3313)",
+    "mapUrl": "https://www.google.com/maps?q=11.2758845,78.3313172",
+    "notes": "Government-run (TASMAC) liquor retail outlet."
+  },
+  {
+    "id": "karavalli-forest-checkpost",
+    "name": "Tamil Nadu Forest Karavalli Check Post",
+    "category": "Checkpoint",
+    "location": "88HG+R5R, Hair-Pin Road, Bailnadu South R.F., Kolli Hills 637415",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Tamilnadu+forest+karavalli+Check+post+Kolli+Hills",
+    "notes": "Forest Department check post on the ghat (hairpin) road — open 24 hours. Vehicles may be checked or recorded on entry; slow down and stop if asked."
+  },
+  {
+    "id": "semmedu-bus-stand",
+    "name": "Semmedu Bus Stand",
+    "category": "Bus Stop",
+    "location": "78HJ+HVX, Semmedu, Kolli Hills, Namakkal 637411",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Semmedu+bus+stand+Kolli+Hills",
+    "notes": "The main bus depot in Semmedu — the hub for government and private buses up and down the hills."
+  }
+]

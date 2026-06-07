@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* Kolli Hills theme — fresh hill-station greens and earthy accents */
+@theme {
+  --color-forest-50: #f1f8f3;
+  --color-forest-100: #ddeee2;
+  --color-forest-200: #bcddc8;
+  --color-forest-300: #8fc4a4;
+  --color-forest-400: #5ea47c;
+  --color-forest-500: #3d8761;
+  --color-forest-600: #2c6c4d;
+  --color-forest-700: #245640;
+  --color-forest-800: #1f4435;
+  --color-forest-900: #1a382c;
+
+  --color-clay-50: #fbf6f1;
+  --color-clay-100: #f3e6d8;
+  --color-clay-200: #e6cbb1;
+  --color-clay-300: #d6a981;
+  --color-clay-400: #c4825a;
+  --color-clay-500: #b3673f;
+
+  --font-display: "Georgia", "Times New Roman", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-forest-50 text-forest-900 antialiased;
+}
+
+/* Markdown body content (attraction / advisory detail pages) */
+.prose-kolli h2 {
+  @apply text-2xl font-bold text-forest-800 mt-8 mb-3;
+}
+.prose-kolli h3 {
+  @apply text-xl font-semibold text-forest-700 mt-6 mb-2;
+}
+.prose-kolli p {
+  @apply leading-relaxed mb-4 text-forest-900/90;
+}
+.prose-kolli ul {
+  @apply list-disc pl-6 mb-4 space-y-1;
+}
+.prose-kolli ol {
+  @apply list-decimal pl-6 mb-4 space-y-1;
+}
+.prose-kolli a {
+  @apply text-forest-600 underline underline-offset-2 hover:text-forest-800;
+}
+.prose-kolli strong {
+  @apply font-semibold text-forest-800;
+}
+.prose-kolli blockquote {
+  @apply border-l-4 border-forest-300 pl-4 italic text-forest-700 my-4;
+}

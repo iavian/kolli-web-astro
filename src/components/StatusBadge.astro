@@ -1,0 +1,21 @@
+---
+interface Props {
+  status: 'open' | 'caution' | 'closed';
+  note?: string;
+  size?: 'sm' | 'md';
+}
+const { status, note, size = 'sm' } = Astro.props;
+
+const map = {
+  open: { label: 'Open', cls: 'bg-forest-100 text-forest-800 ring-forest-300', dot: 'bg-forest-500' },
+  caution: { label: 'Caution', cls: 'bg-amber-100 text-amber-800 ring-amber-300', dot: 'bg-amber-500' },
+  closed: { label: 'Closed', cls: 'bg-red-100 text-red-800 ring-red-300', dot: 'bg-red-500' },
+};
+const s = map[status];
+const pad = size === 'md' ? 'px-3 py-1 text-sm' : 'px-2 py-0.5 text-xs';
+---
+
+<span class:list={['inline-flex items-center gap-1.5 rounded-full font-semibold ring-1 ring-inset', s.cls, pad]}>
+  <span class:list={['h-2 w-2 rounded-full', s.dot]} aria-hidden="true"></span>
+  {note ? `${s.label} · ${note}` : s.label}
+</span>

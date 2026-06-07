@@ -1,0 +1,159 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Thumb from '../components/Thumb.astro';
+import StatusBadge from '../components/StatusBadge.astro';
+import { attractionEmoji, severityStyle } from '../lib/icons';
+
+const featured = (await getCollection('attractions'))
+  .filter((a) => a.data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
+
+const activeAdvisories = (await getCollection('advisories'))
+  .filter((a) => a.data.active)
+  .sort((a, b) => b.data.updated.getTime() - a.data.updated.getTime());
+
+const sections = [
+  { href: '/attractions', emoji: '🌄', title: 'Attractions', desc: 'Waterfalls, viewpoints, temples & more' },
+  { href: '/stay', emoji: '🏨', title: 'Places to Stay', desc: 'Resorts, cottages & homestays' },
+  { href: '/eat', emoji: '🍽️', title: 'Where to Eat', desc: 'Local food, cafés & meals' },
+  { href: '/advisories', emoji: '⚠️', title: 'Advisories', desc: 'Latest safety & status updates' },
+  { href: '/contacts', emoji: '🚨', title: 'Emergency Contacts', desc: 'Police, hospital, mechanics' },
+  { href: '/facilities', emoji: '🚻', title: 'Facilities', desc: 'Restrooms, ATMs, fuel, water' },
+  { href: '/about', emoji: '🧭', title: 'Plan Your Trip', desc: 'How to reach, best time, tips' },
+];
+---
+
+<Layout title="Home">
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-forest-600 via-forest-700 to-forest-900 text-white">
+    <div class="mx-auto max-w-6xl px-4 py-20 sm:py-28">
+      <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-forest-200">
+        Namakkal District · Tamil Nadu, India
+      </p>
+      <h1 class="max-w-3xl font-display text-4xl font-bold leading-tight sm:text-6xl">
+        Discover Kolli Hills
+      </h1>
+      <p class="mt-5 max-w-2xl text-lg text-forest-100">
+        Misty viewpoints, thundering waterfalls, ancient temples and the famous
+        70 hairpin bends. Everything a traveller needs to plan a safe, memorable
+        trip to the "Mountain of Death".
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/attractions" class="rounded-full bg-white px-6 py-3 font-semibold text-forest-800 shadow hover:bg-forest-50">
+          Explore Attractions
+        </a>
+        <a href="/about" class="rounded-full bg-forest-600/60 px-6 py-3 font-semibold text-white ring-1 ring-white/30 hover:bg-forest-600">
+          Plan Your Trip
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Active advisories banner -->
+  {
+    activeAdvisories.length > 0 && (
+      <section class="mx-auto max-w-6xl px-4 pt-10">
+        <h2 class="mb-3 flex items-center gap-2 text-lg font-bold text-forest-800">
+          <span aria-hidden="true">📣</span> Current Advisories
+        </h2>
+        <div class="grid gap-3 sm:grid-cols-2">
+          {activeAdvisories.map((a) => {
+            const s = severityStyle[a.data.severity];
+            return (
+              <a href={`/advisories#${a.id}`} class:list={['block rounded-lg border-l-4 p-4 shadow-sm transition hover:shadow-md', s.cls]}>
+                <p class="font-semibold">
+                  <span class="mr-1" aria-hidden="true">{s.emoji}</span>
+                  {a.data.title}
+                </p>
+                <p class="mt-1 text-sm opacity-90">{a.data.summary}</p>
+              </a>
+            );
+          })}
+        </div>
+      </section>
+    )
+  }
+
+  <!-- About blurb -->
+  <section class="mx-auto max-w-6xl px-4 py-12">
+    <div class="grid items-center gap-8 md:grid-cols-2">
+      <div>
+        <h2 class="font-display text-2xl font-bold text-forest-800">About Kolli Hills</h2>
+        <p class="mt-4 leading-relaxed text-forest-900/90">
+          Kolli Hills (Kolli Malai) is a small, unspoiled mountain range rising from
+          the plains of Namakkal district in Tamil Nadu. At around 1,000–1,300 metres,
+          it stays pleasantly cool through the year and is known for its dense forests,
+          medicinal herbs, jackfruit, pineapple and hill coffee.
+        </p>
+        <p class="mt-3 leading-relaxed text-forest-900/90">
+          Less commercial than many South Indian hill stations, it rewards travellers
+          who enjoy nature, gentle treks, waterfalls and a slower pace.
+        </p>
+        <a href="/about" class="mt-5 inline-block font-semibold text-forest-600 hover:text-forest-800">
+          Read travel essentials →
+        </a>
+      </div>
+      <div class="grid grid-cols-3 gap-3 text-center">
+        <div class="rounded-xl bg-white p-4 shadow-sm">
+          <p class="text-2xl font-bold text-forest-700">70</p>
+          <p class="text-xs text-forest-600">hairpin bends</p>
+        </div>
+        <div class="rounded-xl bg-white p-4 shadow-sm">
+          <p class="text-2xl font-bold text-forest-700">~300 ft</p>
+          <p class="text-xs text-forest-600">Agaya Gangai falls</p>
+        </div>
+        <div class="rounded-xl bg-white p-4 shadow-sm">
+          <p class="text-2xl font-bold text-forest-700">~1,300 m</p>
+          <p class="text-xs text-forest-600">elevation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick section links -->
+  <section class="mx-auto max-w-6xl px-4 pb-4">
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        sections.map((s) => (
+          <a href={s.href} class="group flex items-start gap-4 rounded-xl bg-white p-5 shadow-sm ring-1 ring-forest-100 transition hover:-translate-y-0.5 hover:shadow-md">
+            <span class="text-3xl" aria-hidden="true">{s.emoji}</span>
+            <span>
+              <span class="block font-semibold text-forest-800 group-hover:text-forest-600">{s.title}</span>
+              <span class="block text-sm text-forest-600">{s.desc}</span>
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Featured attractions -->
+  {
+    featured.length > 0 && (
+      <section class="mx-auto max-w-6xl px-4 py-12">
+        <div class="mb-6 flex items-end justify-between">
+          <h2 class="font-display text-2xl font-bold text-forest-800">Must-see attractions</h2>
+          <a href="/attractions" class="text-sm font-semibold text-forest-600 hover:text-forest-800">View all →</a>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {featured.map((a) => (
+            <a href={`/attractions/${a.id}`} class="group overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-forest-100 transition hover:shadow-md">
+              <div class="aspect-[4/3] overflow-hidden">
+                <Thumb image={a.data.image} alt={a.data.title} label={a.data.category} emoji={attractionEmoji[a.data.category]} class="transition group-hover:scale-105" />
+              </div>
+              <div class="p-4">
+                <div class="flex items-center justify-between gap-2">
+                  <span class="text-xs font-semibold uppercase tracking-wide text-forest-500">{a.data.category}</span>
+                  <StatusBadge status={a.data.status} note={a.data.statusNote} />
+                </div>
+                <h3 class="mt-1 font-semibold text-forest-800 group-hover:text-forest-600">{a.data.title}</h3>
+                <p class="mt-1 line-clamp-2 text-sm text-forest-600">{a.data.summary}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )
+  }
+</Layout>

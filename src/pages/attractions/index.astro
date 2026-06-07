@@ -1,0 +1,92 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+import Thumb from '../../components/Thumb.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import { attractionEmoji } from '../../lib/icons';
+
+const items = (await getCollection('attractions')).sort((a, b) => a.data.order - b.data.order);
+const categories = ['All', ...new Set(items.map((i) => i.data.category))];
+---
+
+<Layout title="Attractions" description="Waterfalls, viewpoints, temples and nature spots to visit in Kolli Hills.">
+  <PageHero
+    title="Places of Attraction"
+    emoji="🌄"
+    subtitle="Waterfalls, viewpoints, temples and nature spots across the hills. Check the status badge before you set out."
+  />
+
+  <div class="mx-auto max-w-6xl px-4 py-10">
+    <!-- Category filter -->
+    <div class="mb-8 flex flex-wrap gap-2" id="filter-bar">
+      {
+        categories.map((c, i) => (
+          <button
+            data-cat={c}
+            class:list={[
+              'filter-btn rounded-full px-4 py-1.5 text-sm font-medium ring-1 transition',
+              i === 0
+                ? 'bg-forest-600 text-white ring-forest-600'
+                : 'bg-white text-forest-700 ring-forest-200 hover:bg-forest-50',
+            ]}
+          >
+            {c}
+          </button>
+        ))
+      }
+    </div>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" id="card-grid">
+      {
+        items.map((a) => (
+          <a
+            href={`/attractions/${a.id}`}
+            data-cat={a.data.category}
+            class="attraction-card group overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-forest-100 transition hover:shadow-md"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <Thumb image={a.data.image} alt={a.data.title} label={a.data.category} emoji={attractionEmoji[a.data.category]} class="transition group-hover:scale-105" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-xs font-semibold uppercase tracking-wide text-forest-500">{a.data.category}</span>
+                <StatusBadge status={a.data.status} note={a.data.statusNote} />
+              </div>
+              <h3 class="mt-1 font-semibold text-forest-800 group-hover:text-forest-600">{a.data.title}</h3>
+              <p class="mt-1 line-clamp-2 text-sm text-forest-600">{a.data.summary}</p>
+              {a.data.location && (
+                <p class="mt-2 text-xs text-forest-500">📍 {a.data.location}</p>
+              )}
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+  const cards = document.querySelectorAll<HTMLAnchorElement>('.attraction-card');
+
+  const activeCls = ['bg-forest-600', 'text-white', 'ring-forest-600'];
+  const idleCls = ['bg-white', 'text-forest-700', 'ring-forest-200', 'hover:bg-forest-50'];
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const cat = btn.dataset.cat;
+      buttons.forEach((b) => {
+        b.classList.remove(...activeCls);
+        b.classList.add(...idleCls);
+      });
+      btn.classList.add(...activeCls);
+      btn.classList.remove(...idleCls);
+
+      cards.forEach((card) => {
+        const show = cat === 'All' || card.dataset.cat === cat;
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  });
+</script>
