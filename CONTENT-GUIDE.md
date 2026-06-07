@@ -28,7 +28,7 @@ file in the same folder, rename it, and edit it.**
 ## ➕ Add a new restaurant (example)
 
 1. Go to `src/content/eat/`.
-2. Copy `hill-spice-restaurant.md` and rename the copy, e.g. `green-leaf-hotel.md`
+2. Copy `tn28-family-restaurant.md` and rename the copy, e.g. `green-leaf-hotel.md`
    (use lowercase letters and hyphens, no spaces).
 3. Open it and edit the top section:
 
