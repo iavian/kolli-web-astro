@@ -93,5 +93,14 @@
     "address": "Old SF No 179/B1, Kollimalai, Vallavandhi Nadu, Semmedu (Adukkam), Kolli Hills 637411",
     "notes": "Fuel up before the climb — limited stations on the hills",
     "available": "Opens 6:00 AM (check current hours)"
+  },
+  {
+    "id": "fuel-station-hp",
+    "name": "Hindustan Petroleum (HP) Petrol Bunk, Ariyurnadu",
+    "category": "Fuel",
+    "phone": "+91 94422 49939",
+    "address": "Sy No 665, Ariyurnadu, Kolli Hills 637411",
+    "notes": "Second fuel station on the hills (Ariyurnadu side); has diesel",
+    "available": "5:00 AM – 11:00 PM"
   }
 ]
