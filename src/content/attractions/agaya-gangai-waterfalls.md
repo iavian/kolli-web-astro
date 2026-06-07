@@ -2,7 +2,7 @@
 title: Agaya Gangai Waterfalls
 category: Waterfall
 summary: A spectacular 300-foot waterfall reached by a steep flight of around 1,000 steps, set deep in the valley near the Arapaleeswarar Temple.
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Stairs_AgayaGangai.jpg?width=500"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Kolli_Malai_Aagaya_Gangai_Falls.jpg?width=500"
 location: Near Arapaleeswarar Temple, Kolli Hills
 bestTime: June to September for the strongest flow; post-monsoon for easier trekking
 entryFee: ₹20 per person (approx.)

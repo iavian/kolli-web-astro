@@ -2,6 +2,7 @@
 title: Solakkadu Market
 category: Culture
 summary: A bustling local produce market (a fruits wholesaler) in Solakkadu — a window into the hills' famous jackfruit, pineapple, pepper and spice trade. Rated 4.2★ on Google.
+image: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEWRgd4rpYrNFkFeOp_85ACUfFTHO0kc78pvdvc9euhT8uOwEj3Rxfbi2JePlZZ7bHJcc17dt3oQzFOd2pSnhAqeG0dklBKurDdiR6tCkWM9kyXc6iz_eKbPjyk5aaRhjCFo4ZBlA=s1360-w1360-h1020"
 location: 885X+P8R, Semmedu Rd, Solakkadu, Karavallicombai R.F., Kolli Hills 637415
 bestTime: Early morning, when trading is liveliest
 entryFee: Free to visit
