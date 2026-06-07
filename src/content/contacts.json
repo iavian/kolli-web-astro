@@ -25,11 +25,11 @@
   },
   {
     "id": "kolli-police-station",
-    "name": "Kolli Hills Police Station",
+    "name": "Valavanthi Nadu Police Station (Kolli Hills)",
     "category": "Police",
-    "phone": "+91 90000 00100",
+    "phone": "04286 247428",
     "address": "Semmedu, Kolli Hills, Namakkal District",
-    "notes": "Local police station for the hill area",
+    "notes": "Local police station for the hill area (official Namakkal district listing)",
     "available": "24x7"
   },
   {
@@ -87,11 +87,11 @@
   },
   {
     "id": "fuel-station",
-    "name": "Petrol Bunk, Kolli Hills",
+    "name": "IndianOil Petrol Bunk, Kolli Hills",
     "category": "Fuel",
-    "phone": "+91 90000 00600",
-    "address": "Semmedu",
+    "phone": "+91 94435 99987",
+    "address": "Old SF No 179/B1, Kollimalai, Vallavandhi Nadu, Semmedu (Adukkam), Kolli Hills 637411",
     "notes": "Fuel up before the climb — limited stations on the hills",
-    "available": "7:00 AM – 8:00 PM"
+    "available": "Opens 6:00 AM (check current hours)"
   }
 ]
