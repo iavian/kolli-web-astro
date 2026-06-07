@@ -6,7 +6,7 @@ image: "https://commons.wikimedia.org/wiki/Special:FilePath/KolliHills_Valley.JP
 location: North-east Kolli Hills (Seeku Parai)
 bestTime: Early morning before sunrise, for the clearest views
 entryFee: Free (small parking charge)
-timings: Daylight hours
+timings: 7:00 AM – 5:00 PM (open daily)
 status: open
 featured: true
 order: 2

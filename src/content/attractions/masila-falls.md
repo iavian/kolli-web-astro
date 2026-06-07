@@ -6,7 +6,7 @@ image: "https://commons.wikimedia.org/wiki/Special:FilePath/Masila_Falls.jpg?wid
 location: Kolli Hills, Namakkal District
 bestTime: Monsoon and just after (July to December)
 entryFee: Free / small charge
-timings: Daylight hours
+timings: 6:00 AM – 6:00 PM (daily)
 status: caution
 statusNote: Water levels rise fast after rain
 order: 3

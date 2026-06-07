@@ -6,7 +6,7 @@ image: "https://commons.wikimedia.org/wiki/Special:FilePath/34th_Hairpin_Kolli_H
 location: On the ghat road, partway up the 70 hairpin bends
 bestTime: Morning for clear views; avoid in heavy fog
 entryFee: Free
-timings: Daylight hours
+timings: Open 24 hours (roadside viewpoint)
 status: open
 order: 7
 ---

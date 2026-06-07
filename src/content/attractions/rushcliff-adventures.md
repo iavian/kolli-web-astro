@@ -6,7 +6,7 @@ image: "https://rushcliffadventures.in/images/home/kolli-hills-atv-adventure.web
 location: Ettukai Amman Temple Road, near Namma Aruvi Falls, Ariyur Nadu, Kolli Hills 637411
 bestTime: Dry months for the best trail conditions
 entryFee: Paid activities (per-ride / package — contact the park)
-timings: Check current operating days & hours (newly opened)
+timings: 9:00 AM – 7:00 PM (newly opened — confirm current hours)
 status: open
 order: 14
 ---
