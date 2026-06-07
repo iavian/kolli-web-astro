@@ -2,6 +2,7 @@
 title: Siddhar Caves
 category: Adventure
 summary: Ancient rock caves once used by Siddhars (spiritual sages) for meditation — a trekker's spot rich in legend, with worn rock faces, natural acoustics and valley-framing openings.
+image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQGFsisptCKdTuuPCGkAJmbklSCXL5CfHTm8H9EW7alqynIyleOOk1pq4u73uJfOF5dnnVIDm6BBhO9yAzsTMaz65U0Cqv62RnZycNv6qQz2xQ5PWpszM52BB6z0GUvng49EaGrvq2GUc/s640/coming+out+Agathiar+Caves+%283%29.JPG"
 location: Near Agaya Gangai, Kolli Hills, Namakkal District
 bestTime: Early mornings, just after sunrise
 entryFee: Free (a local guide is strongly recommended)
