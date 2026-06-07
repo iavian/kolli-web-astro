@@ -2,6 +2,7 @@
 title: RushCliff Adventures
 category: Adventure
 summary: A nature-based adventure park near Namma Aruvi Falls with ATV/quad rides, ziplines, off-road jeep trails, trekking and a kids' zone — plus a scenic valley-view café. "No chill, just thrill."
+image: "https://rushcliffadventures.in/images/home/kolli-hills-atv-adventure.webp"
 location: Ettukai Amman Temple Road, near Namma Aruvi Falls, Ariyur Nadu, Kolli Hills 637411
 bestTime: Dry months for the best trail conditions
 entryFee: Paid activities (per-ride / package — contact the park)
