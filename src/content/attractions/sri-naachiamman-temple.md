@@ -2,6 +2,7 @@
 title: Sri Naachiamman Temple
 category: Temple
 summary: A revered Amman (mother goddess) temple in the Kolli Hills, a focal point of local faith and especially lively during its annual festival.
+image: "https://images.news18.com/tamil/uploads/2024/12/HYP_4868224_cropped_22122024_003257_kolli_hills_118_watermark__2-3x2.jpg"
 location: Kolli Hills, Namakkal District
 bestTime: Year-round; festival season is most vibrant
 entryFee: Free
