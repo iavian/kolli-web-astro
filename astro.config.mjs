@@ -5,5 +5,7 @@ import { defineConfig } from 'astro/config';
 // compatible with Astro 6's Rolldown-based Vite.
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://kollihills.example.com',
+  // Used to build absolute canonical / Open Graph URLs. Update this if the site
+  // moves to a custom domain.
+  site: 'https://kolli-web-astro.vercel.app',
 });
