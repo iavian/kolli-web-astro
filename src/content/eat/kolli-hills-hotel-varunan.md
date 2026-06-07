@@ -2,6 +2,7 @@
 title: Kolli Hills Hotel Varunan
 cuisine: South Indian (veg & non-veg)
 summary: A popular, down-to-earth restaurant in Valavanthinadu serving traditional recipes with both vegetarian and non-vegetarian options — well-reviewed (4.1★, 690+ reviews), with dine-in, drive-through and delivery.
+image: "https://img3.restaurantguru.com/w550/h367/r152-KOLLI-HILLS-HOTEL-VARUNAN-design-2025-07-2.jpg"
 location: Valavanthinadu, Semmedu, Kolli Hills, Namakkal 637411
 priceRange: Budget (local rates)
 phone: "+91 97869 51187"

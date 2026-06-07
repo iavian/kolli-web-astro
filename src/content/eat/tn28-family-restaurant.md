@@ -2,6 +2,7 @@
 title: TN28 Family Restaurant
 cuisine: South Indian, Biryani & Non-Veg
 summary: A popular, highly-rated family restaurant opposite the Government Hospital in Semmedu — known for flavourful biryani and chicken dishes at reasonable prices.
+image: "https://img.restaurantguru.com/w550/h367/r149-design-TN-28-family-restaurant.jpg"
 location: Kolli Hills, near Semmedu Bus Stop (Opposite Govt. Hospital), Namakkal, Tamil Nadu
 priceRange: ₹150 – ₹400 per person
 phone: "+91 94881 32828"
