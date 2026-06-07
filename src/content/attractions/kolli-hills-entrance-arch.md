@@ -2,7 +2,7 @@
 title: Kolli Hills Entrance Arch
 category: Culture
 summary: The iconic welcome arch that greets every visitor at the foot of the ghat road — a popular first-photo stop before the climb of 70 hairpin bends.
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/34_Hairpin_Kolli_Hills.jpg?width=500"
+image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz3aTOeT5GiOnwS4ONBAKzXVHkM60mCouh7Q&s"
 location: Base of the ghat road, near Karavalli / Namakkal side
 bestTime: Year-round; good light in the morning
 entryFee: Free

@@ -2,6 +2,7 @@
 title: Aruvi Resort
 type: Resort
 summary: A clean, eco-conscious budget resort at around 3,000 ft with an on-site Tamil restaurant, kids' play area, campfire and sightseeing cab service — "modern by service, budget by cost."
+image: "https://aruviresortkollihills.com/assets/images/seo/67f160e5858a21743872229.jpg"
 location: Kilakku Valavu, Valappurnadu, Kolli Hills, Namakkal 637411
 priceRange: ₹3,000 – ₹4,500 / night
 phone: "+91 90872 22391"

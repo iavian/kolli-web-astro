@@ -2,6 +2,7 @@
 title: Seattle Garden
 type: Resort
 summary: A plantation resort set across 2.5 acres of coffee, pepper, cardamom and spice gardens near the Panchanathi River, with an in-house restaurant, AC rooms and cottages — for couples and families.
+image: "https://www.seattlegarden.in/image/new/sg1.jpg"
 location: 15/31, Puranikaadupatti, Valavanthinadu, Kolli Hills, Namakkal 637411
 priceRange: Tariff on request — contact the resort
 phone: "+91 80158 35108"

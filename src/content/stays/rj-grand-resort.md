@@ -2,6 +2,7 @@
 title: RJ Grand Resort
 type: Resort
 summary: A well-equipped hill resort in Kolli Hills with an outdoor pool, campfire and a range of rooms and suites — pitched as "the coolest resort in the hills" for families and groups.
+image: "https://static.wixstatic.com/media/cdf853_167a2ddc3d9a402086d825b359ebf852~mv2.jpg/v1/fill/w_1200,h_800,al_c/cdf853_167a2ddc3d9a402086d825b359ebf852~mv2.jpg"
 location: Kolli Hills, Namakkal, Tamil Nadu
 priceRange: Tariff on request — contact the resort
 phone: "+91 93448 05550"

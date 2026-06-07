@@ -2,6 +2,7 @@
 title: Exoticamp Tent Stay
 type: Camping
 summary: A tented camping experience set on a pepper estate in Kolli Hills — wake to peacock calls, gather around an evening bonfire, with proper restrooms, breakfast and Wi-Fi included.
+image: "https://images.exoticamp.com/vendors/images/profile/2_20240930T090511496Z.jpg"
 location: Pepper estate, Kolli Hills, Namakkal District
 priceRange: Paid packages (varies by tent & inclusions)
 phone: "+91 97900 00401"
