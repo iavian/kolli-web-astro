@@ -26,8 +26,18 @@ const sections = [
 
 <Layout title="Home">
   <!-- Hero -->
-  <section class="relative overflow-hidden bg-gradient-to-br from-forest-600 via-forest-700 to-forest-900 text-white">
-    <div class="mx-auto max-w-6xl px-4 py-20 sm:py-28">
+  <section class="relative overflow-hidden bg-forest-800 text-white">
+    <!-- Background photo of the Kolli Hills -->
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:FilePath/Cloud_slides_in_peaks_in_kolli_hills.jpg?width=1280"
+      alt=""
+      aria-hidden="true"
+      loading="eager"
+      class="absolute inset-0 h-full w-full object-cover"
+    />
+    <!-- Forest-tinted overlay keeps the heading readable -->
+    <div class="absolute inset-0 bg-gradient-to-br from-forest-900/85 via-forest-800/70 to-forest-900/85"></div>
+    <div class="relative mx-auto max-w-6xl px-4 py-20 sm:py-28">
       <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-forest-200">
         Namakkal District · Tamil Nadu, India
       </p>
