@@ -2,6 +2,7 @@
 title: Two Stepped Kutti Water Falls
 category: Waterfall
 summary: A charming two-tiered ("two stepped") waterfall in the Devanurnadu area of Kolli Hills (4.1★ on Google) — a quiet, refreshing spot away from the busier falls.
+image: "https://media.evendo.com/locations-resized/AttractionImages/1920x466/b6c53a25-670a-4929-ab02-fa3b0874c1d3"
 location: 69J5+JC6, Unnamed Road, Devanurnadu, Kolli Hills, Namakkal 637411
 bestTime: Monsoon and just after (July to December), when the flow is strongest
 entryFee: Free / small charge
