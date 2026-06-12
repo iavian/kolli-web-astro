@@ -15,15 +15,15 @@ const items = (await getCollection('eat')).sort((a, b) => a.data.order - b.data.
     subtitle="Local Tamil meals, hill coffee and Kolli's famous jackfruit. Carry some cash — card and UPI may not always work on the hills."
   />
 
-  <div class="mx-auto max-w-6xl px-4 py-10">
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  <div class="mx-auto max-w-6xl px-4 py-8">
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {
         items.map((e) => (
           <article class="flex flex-col overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-forest-100 transition hover:shadow-md">
             <a href={`/eat/${e.id}`} class="block aspect-[16/9] overflow-hidden">
               <Thumb image={e.data.image} alt={e.data.title} label={e.data.cuisine} emoji="🍴" />
             </a>
-            <div class="flex flex-1 flex-col p-5">
+            <div class="flex flex-1 flex-col p-4">
               <div class="flex items-center justify-between gap-2">
                 <div class="flex items-center gap-1.5">
                   {e.data.vegOnly && (
@@ -39,7 +39,7 @@ const items = (await getCollection('eat')).sort((a, b) => a.data.order - b.data.
                 </div>
                 {e.data.status === 'closed' && <StatusBadge status="closed" />}
               </div>
-              <h3 class="mt-1 text-lg font-bold text-forest-800">
+              <h3 class="mt-1 text-lg font-bold tracking-tight text-forest-800">
                 <a href={`/eat/${e.id}`} class="hover:text-forest-600">{e.data.title}</a>
               </h3>
               <p class="text-xs font-medium text-forest-500">{e.data.cuisine}</p>

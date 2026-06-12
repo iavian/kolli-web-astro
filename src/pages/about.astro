@@ -44,7 +44,7 @@ const activities = [
     subtitle="Everything you need to know before visiting Kolli Hills — how to get there, when to come and how to stay safe."
   />
 
-  <div class="mx-auto max-w-4xl px-4 py-10">
+  <div class="mx-auto max-w-4xl px-4 py-8">
     <!-- General info -->
     <section class="prose-kolli max-w-none">
       <h2>About Kolli Hills</h2>
@@ -63,12 +63,12 @@ const activities = [
     </section>
 
     <!-- How to reach -->
-    <section class="mt-10">
-      <h2 class="font-display text-2xl font-bold text-forest-800">How to reach</h2>
+    <section class="mt-9">
+      <h2 class="font-display text-2xl font-bold tracking-tight text-forest-800">How to reach</h2>
       <div class="mt-4 grid gap-4 sm:grid-cols-2">
         {
           reach.map((r) => (
-            <div class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-forest-100">
+            <div class="rounded-xl bg-white p-4 shadow-sm ring-1 ring-forest-100">
               <h3 class="font-semibold text-forest-800">{r.mode}</h3>
               <p class="mt-1 text-sm text-forest-600">{r.text}</p>
             </div>
@@ -78,12 +78,12 @@ const activities = [
     </section>
 
     <!-- Travel tips -->
-    <section class="mt-10">
-      <h2 class="font-display text-2xl font-bold text-forest-800">Travel tips &amp; essentials</h2>
+    <section class="mt-9">
+      <h2 class="font-display text-2xl font-bold tracking-tight text-forest-800">Travel tips &amp; essentials</h2>
       <div class="mt-4 grid gap-4 sm:grid-cols-2">
         {
           tips.map(([icon, title, body]) => (
-            <div class="flex gap-3 rounded-xl bg-white p-5 shadow-sm ring-1 ring-forest-100">
+            <div class="flex gap-3 rounded-xl bg-white p-4 shadow-sm ring-1 ring-forest-100">
               <span class="text-2xl" aria-hidden="true">{icon}</span>
               <div>
                 <h3 class="font-semibold text-forest-800">{title}</h3>
@@ -96,12 +96,12 @@ const activities = [
     </section>
 
     <!-- Things to do -->
-    <section class="mt-10">
-      <h2 class="font-display text-2xl font-bold text-forest-800">Things to do</h2>
+    <section class="mt-9">
+      <h2 class="font-display text-2xl font-bold tracking-tight text-forest-800">Things to do</h2>
       <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {
           activities.map(([icon, title, body]) => (
-            <div class="rounded-xl bg-white p-5 shadow-sm ring-1 ring-forest-100">
+            <div class="rounded-xl bg-white p-4 shadow-sm ring-1 ring-forest-100">
               <h3 class="font-semibold text-forest-800">
                 <span class="mr-1.5" aria-hidden="true">{icon}</span>
                 {title}
@@ -114,8 +114,8 @@ const activities = [
     </section>
 
     <!-- Local food -->
-    <section class="mt-10">
-      <h2 class="font-display text-2xl font-bold text-forest-800">Local food &amp; produce</h2>
+    <section class="mt-9">
+      <h2 class="font-display text-2xl font-bold tracking-tight text-forest-800">Local food &amp; produce</h2>
       <p class="mt-2 text-forest-600">
         Kolli Hills is known for its medicinal herbs, coffee, pepper and especially
         its jackfruit. Don't leave without trying a few hill specialities:
@@ -123,7 +123,7 @@ const activities = [
       <div class="mt-4 grid gap-4 sm:grid-cols-2">
         {
           food.map(([icon, title, body]) => (
-            <div class="flex gap-3 rounded-xl bg-white p-5 shadow-sm ring-1 ring-forest-100">
+            <div class="flex gap-3 rounded-xl bg-white p-4 shadow-sm ring-1 ring-forest-100">
               <span class="text-2xl" aria-hidden="true">{icon}</span>
               <div>
                 <h3 class="font-semibold text-forest-800">{title}</h3>
@@ -136,8 +136,8 @@ const activities = [
     </section>
 
     <!-- CTA -->
-    <section class="mt-10 rounded-2xl bg-forest-700 p-8 text-center text-white">
-      <h2 class="font-display text-2xl font-bold">Before you set off</h2>
+    <section class="mt-9 rounded-2xl bg-forest-700 p-7 text-center text-white">
+      <h2 class="font-display text-2xl font-bold tracking-tight">Before you set off</h2>
       <p class="mx-auto mt-2 max-w-xl text-forest-100">
         Check the latest advisories and save the emergency contacts. A little planning
         makes for a safe and memorable trip.

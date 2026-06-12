@@ -8,10 +8,10 @@ const { title, subtitle, emoji } = Astro.props;
 ---
 
 <section class="bg-forest-700 text-forest-50">
-  <div class="mx-auto max-w-6xl px-4 py-10 sm:py-12">
-    <h1 class="font-display text-3xl font-bold sm:text-4xl">
+  <div class="mx-auto max-w-6xl px-4 py-8 sm:py-10">
+    <h1 class="font-display text-3xl font-bold tracking-tight sm:text-4xl">
       {emoji && <span class="mr-2" aria-hidden="true">{emoji}</span>}{title}
     </h1>
-    {subtitle && <p class="mt-2 max-w-2xl text-forest-200">{subtitle}</p>}
+    {subtitle && <p class="mt-2 max-w-2xl text-sm text-forest-200 sm:text-base">{subtitle}</p>}
   </div>
 </section>

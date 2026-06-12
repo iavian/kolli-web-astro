@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Self-hosted variable fonts (loaded via Layout.astro imports):
+   Fraunces for display headings, Inter for body text. */
+
 /* Kolli Hills theme — fresh hill-station greens and earthy accents */
 @theme {
   --color-forest-50: #f1f8f3;
@@ -20,7 +23,8 @@
   --color-clay-400: #c4825a;
   --color-clay-500: #b3673f;
 
-  --font-display: "Georgia", "Times New Roman", serif;
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Fraunces Variable", "Georgia", "Times New Roman", serif;
 }
 
 html {
@@ -31,21 +35,26 @@ body {
   @apply bg-forest-50 text-forest-900 antialiased;
 }
 
+/* Fraunces ships wide by default — pull display headings in a touch. */
+.font-display {
+  font-optical-sizing: auto;
+}
+
 /* Markdown body content (attraction / advisory detail pages) */
 .prose-kolli h2 {
-  @apply text-2xl font-bold text-forest-800 mt-8 mb-3;
+  @apply font-display text-2xl font-bold tracking-tight text-forest-800 mt-8 mb-3;
 }
 .prose-kolli h3 {
-  @apply text-xl font-semibold text-forest-700 mt-6 mb-2;
+  @apply text-lg font-semibold tracking-tight text-forest-700 mt-6 mb-2;
 }
 .prose-kolli p {
-  @apply leading-relaxed mb-4 text-forest-900/90;
+  @apply leading-relaxed mb-4 text-[0.9375rem] text-forest-900/90 sm:text-base;
 }
 .prose-kolli ul {
-  @apply list-disc pl-6 mb-4 space-y-1;
+  @apply list-disc pl-6 mb-4 space-y-1 text-[0.9375rem] sm:text-base;
 }
 .prose-kolli ol {
-  @apply list-decimal pl-6 mb-4 space-y-1;
+  @apply list-decimal pl-6 mb-4 space-y-1 text-[0.9375rem] sm:text-base;
 }
 .prose-kolli a {
   @apply text-forest-600 underline underline-offset-2 hover:text-forest-800;

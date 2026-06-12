@@ -37,23 +37,23 @@ const sections = [
     />
     <!-- Forest-tinted overlay keeps the heading readable -->
     <div class="absolute inset-0 bg-gradient-to-br from-forest-900/85 via-forest-800/70 to-forest-900/85"></div>
-    <div class="relative mx-auto max-w-6xl px-4 py-20 sm:py-28">
-      <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-forest-200">
+    <div class="relative mx-auto max-w-6xl px-4 py-16 sm:py-24">
+      <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-forest-200 sm:text-sm">
         Namakkal District · Tamil Nadu, India
       </p>
-      <h1 class="max-w-3xl font-display text-4xl font-bold leading-tight sm:text-6xl">
+      <h1 class="max-w-3xl font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl">
         Discover Kolli Hills
       </h1>
-      <p class="mt-5 max-w-2xl text-lg text-forest-100">
+      <p class="mt-4 max-w-2xl text-base text-forest-100 sm:text-lg">
         Misty viewpoints, thundering waterfalls, ancient temples and the famous
         70 hairpin bends. Everything a traveller needs to plan a safe, memorable
         trip to the "Mountain of Death".
       </p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href="/attractions" class="rounded-full bg-white px-6 py-3 font-semibold text-forest-800 shadow hover:bg-forest-50">
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="/attractions" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-forest-800 shadow hover:bg-forest-50">
           Explore Attractions
         </a>
-        <a href="/about" class="rounded-full bg-forest-600/60 px-6 py-3 font-semibold text-white ring-1 ring-white/30 hover:bg-forest-600">
+        <a href="/about" class="rounded-full bg-forest-600/60 px-5 py-2.5 text-sm font-semibold text-white ring-1 ring-white/30 hover:bg-forest-600">
           Plan Your Trip
         </a>
       </div>
@@ -63,7 +63,7 @@ const sections = [
   <!-- Active advisories banner -->
   {
     activeAdvisories.length > 0 && (
-      <section class="mx-auto max-w-6xl px-4 pt-10">
+      <section class="mx-auto max-w-6xl px-4 pt-8">
         <h2 class="mb-3 flex items-center gap-2 text-lg font-bold text-forest-800">
           <span aria-hidden="true">📣</span> Current Advisories
         </h2>
@@ -86,11 +86,11 @@ const sections = [
   }
 
   <!-- About blurb -->
-  <section class="mx-auto max-w-6xl px-4 py-12">
+  <section class="mx-auto max-w-6xl px-4 py-10">
     <div class="grid items-center gap-8 md:grid-cols-2">
       <div>
-        <h2 class="font-display text-2xl font-bold text-forest-800">About Kolli Hills</h2>
-        <p class="mt-4 leading-relaxed text-forest-900/90">
+        <h2 class="font-display text-2xl font-bold tracking-tight text-forest-800">About Kolli Hills</h2>
+        <p class="mt-3 leading-relaxed text-forest-900/90">
           Kolli Hills (Kolli Malai) is a small, unspoiled mountain range rising from
           the plains of Namakkal district in Tamil Nadu. At around 1,000–1,300 metres,
           it stays pleasantly cool through the year and is known for its dense forests,
@@ -126,8 +126,8 @@ const sections = [
     <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {
         sections.map((s) => (
-          <a href={s.href} class="group flex items-start gap-4 rounded-xl bg-white p-5 shadow-sm ring-1 ring-forest-100 transition hover:-translate-y-0.5 hover:shadow-md">
-            <span class="text-3xl" aria-hidden="true">{s.emoji}</span>
+          <a href={s.href} class="group flex items-start gap-3 rounded-xl bg-white p-4 shadow-sm ring-1 ring-forest-100 transition hover:-translate-y-0.5 hover:shadow-md">
+            <span class="text-2xl" aria-hidden="true">{s.emoji}</span>
             <span>
               <span class="block font-semibold text-forest-800 group-hover:text-forest-600">{s.title}</span>
               <span class="block text-sm text-forest-600">{s.desc}</span>
@@ -141,12 +141,12 @@ const sections = [
   <!-- Featured attractions -->
   {
     featured.length > 0 && (
-      <section class="mx-auto max-w-6xl px-4 py-12">
-        <div class="mb-6 flex items-end justify-between">
-          <h2 class="font-display text-2xl font-bold text-forest-800">Must-see attractions</h2>
+      <section class="mx-auto max-w-6xl px-4 py-10">
+        <div class="mb-5 flex items-end justify-between">
+          <h2 class="font-display text-2xl font-bold tracking-tight text-forest-800">Must-see attractions</h2>
           <a href="/attractions" class="text-sm font-semibold text-forest-600 hover:text-forest-800">View all →</a>
         </div>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((a) => (
             <a href={`/attractions/${a.id}`} class="group overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-forest-100 transition hover:shadow-md">
               <div class="aspect-[4/3] overflow-hidden">

@@ -17,9 +17,9 @@ const categories = ['All', ...new Set(items.map((i) => i.data.category))];
     subtitle="Waterfalls, viewpoints, temples and nature spots across the hills. Check the status badge before you set out."
   />
 
-  <div class="mx-auto max-w-6xl px-4 py-10">
+  <div class="mx-auto max-w-6xl px-4 py-8">
     <!-- Category filter -->
-    <div class="mb-8 flex flex-wrap gap-2" id="filter-bar">
+    <div class="mb-6 flex flex-wrap gap-2" id="filter-bar">
       {
         categories.map((c, i) => (
           <button
@@ -38,7 +38,7 @@ const categories = ['All', ...new Set(items.map((i) => i.data.category))];
       }
     </div>
 
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" id="card-grid">
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" id="card-grid">
       {
         items.map((a) => (
           <a
