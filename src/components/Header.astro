@@ -80,7 +80,8 @@ const isActive = (href: string) =>
   const toggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('mobile-menu');
   toggle?.addEventListener('click', () => {
-    const open = menu?.classList.toggle('hidden');
-    toggle.setAttribute('aria-expanded', String(open === false));
+    if (!menu) return;
+    const nowHidden = menu.classList.toggle('hidden');
+    toggle.setAttribute('aria-expanded', String(!nowHidden));
   });
 </script>

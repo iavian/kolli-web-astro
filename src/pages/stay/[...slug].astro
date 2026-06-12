@@ -19,7 +19,7 @@ const facts = [
   { label: 'Price range', value: d.priceRange },
 ].filter((f) => f.value);
 
-const telHref = d.phone ? `tel:${d.phone.replace(/\s/g, '')}` : null;
+const telHref = d.phone ? `tel:${d.phone.replace(/[^\d+]/g, '')}` : null;
 ---
 
 <Layout title={d.title} description={d.summary} image={d.image} type="article">

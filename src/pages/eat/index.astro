@@ -31,6 +31,11 @@ const items = (await getCollection('eat')).sort((a, b) => a.data.order - b.data.
                       ● VEG
                     </span>
                   )}
+                  {e.data.unverified && (
+                    <span class="rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-700 ring-1 ring-amber-200" title="We haven't verified this listing's contact details yet.">
+                      Details unverified
+                    </span>
+                  )}
                 </div>
                 {e.data.status === 'closed' && <StatusBadge status="closed" />}
               </div>
@@ -44,7 +49,7 @@ const items = (await getCollection('eat')).sort((a, b) => a.data.order - b.data.
                 {e.data.priceRange && <p class="font-semibold text-forest-700">{e.data.priceRange}</p>}
                 {e.data.location && <p class="text-forest-500">📍 {e.data.location}</p>}
                 {e.data.phone && (
-                  <a href={`tel:${e.data.phone.replace(/\s/g, '')}`} class="block font-semibold text-forest-600 hover:text-forest-800">
+                  <a href={`tel:${e.data.phone.replace(/[^\d+]/g, '')}`} class="block font-semibold text-forest-600 hover:text-forest-800">
                     📞 {e.data.phone}
                   </a>
                 )}
